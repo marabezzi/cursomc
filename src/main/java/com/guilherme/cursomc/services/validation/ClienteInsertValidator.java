@@ -37,7 +37,7 @@ public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert
 			list.add(new FieldMessage("cpfOuCnpj", "CNPJ inválido"));
 		}
 
-		/*Cliente aux = repo.findByEmail(objDto.getEmail());
+		Cliente aux = repo.findByEmail(objDto.getEmail());
 		if (aux != null) {
 			list.add(new FieldMessage("email", "Email já existente"));
 		}
@@ -46,7 +46,7 @@ public class ClienteInsertValidator implements ConstraintValidator<ClienteInsert
 			context.disableDefaultConstraintViolation();
 			context.buildConstraintViolationWithTemplate(e.getMessage()).addPropertyNode(e.getFieldName())
 					.addConstraintViolation();
-		}*/
+		}
 		return list.isEmpty();
 	}
 }
